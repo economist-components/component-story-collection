@@ -41030,7 +41030,7 @@ module.exports={
   },
   "dist": {
     "shasum": "5c710f2bab95653272842ba01c6ea61b3545ec35",
-    "tarball": "http://172.17.9.186:4873/cheerio/-/cheerio-0.20.0.tgz"
+    "tarball": "http://172.17.8.196:4873/cheerio/-/cheerio-0.20.0.tgz"
   },
   "maintainers": [
     {
@@ -41051,7 +41051,7 @@ module.exports={
     }
   ],
   "directories": {},
-  "_resolved": "http://172.17.9.186:4873/cheerio/-/cheerio-0.20.0.tgz",
+  "_resolved": "http://172.17.8.196:4873/cheerio/-/cheerio-0.20.0.tgz",
   "readme": "ERROR: No README data found!"
 }
 
@@ -45162,7 +45162,7 @@ module.exports={
   },
   "dist": {
     "shasum": "5c710f2bab95653272842ba01c6ea61b3545ec35",
-    "tarball": "http://172.17.9.186:4873/cheerio/-/cheerio-0.20.0.tgz"
+    "tarball": "http://172.17.8.196:4873/cheerio/-/cheerio-0.20.0.tgz"
   },
   "maintainers": [
     {
@@ -45183,7 +45183,7 @@ module.exports={
     }
   ],
   "directories": {},
-  "_resolved": "http://172.17.9.186:4873/cheerio/-/cheerio-0.20.0.tgz"
+  "_resolved": "http://172.17.8.196:4873/cheerio/-/cheerio-0.20.0.tgz"
 }
 
 },{}],526:[function(require,module,exports){
