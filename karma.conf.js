@@ -1,15 +1,15 @@
 const packageJson = require('./package.json');
 const path = require('path');
-const browserifyIstanbul = require('browserify-istanbul');
-const isparta = require('isparta');
 const oneSecondInMilliseconds = 1000;
 const oneMinuteInSeconds = 60;
 const twoMinutesInMilliseconds = oneSecondInMilliseconds * oneMinuteInSeconds * 2;
 function configureBuildValue() {
+  /* eslint-disable prefer-template */
   if (process.env.GO_PIPELINE_NAME && process.env.GO_PIPELINE_LABEL) {
-    return `${ process.env.GO_PIPELINE_NAME }-${ process.env.GO_PIPELINE_LABEL }`;
+    return process.env.GO_PIPELINE_NAME + '-' + process.env.GO_PIPELINE_LABEL;
   }
-  return `localbuild-${ new Date().toJSON() }`;
+  return 'localbuild-' + new Date().toJSON();
+  /* eslint-enable prefer-template */
 }
 module.exports = function configureKarma(config) {
   const localBrowsers = [
@@ -27,6 +27,7 @@ module.exports = function configureKarma(config) {
     SauceSafariLatest: {
       base: 'SauceLabs',
       browserName: 'Safari',
+      platform: 'Mac 10.9',
     },
     SauceInternetExplorerLatest: {
       base: 'SauceLabs',
@@ -45,15 +46,13 @@ module.exports = function configureKarma(config) {
     basePath: '',
     browsers: localBrowsers,
     logLevel: config.LOG_INFO,
-    frameworks: [ 'browserify', 'mocha' ],
+    frameworks: [ 'mocha' ],
     files: [
-      path.join(packageJson.directories.test, '*.js'),
+      path.join(packageJson.directories.site, 'bundle.js'),
     ],
     exclude: [],
-    preprocessors: {
-      [path.join(packageJson.directories.test, '*.js')]: [ 'browserify' ],
-    },
-    reporters: [ 'mocha', 'coverage' ],
+    preprocessors: {},
+    reporters: [ 'mocha' ],
     port: 9876,
     colors: true,
     concurrency: 3,
@@ -62,25 +61,6 @@ module.exports = function configureKarma(config) {
     browserDisconnectTimeout: twoMinutesInMilliseconds,
     browserNoActivityTimeout: twoMinutesInMilliseconds,
     singleRun: true,
-    browserify: {
-      transform: [
-        browserifyIstanbul({
-          instrumenter: isparta,
-          ignore: [ '**/node_modules/**', '**/test/**' ],
-        }),
-        'babelify',
-      ],
-      configure: (bundle) => {
-        bundle.on('prebundle', () => {
-          bundle.external('react/lib/ReactContext');
-          bundle.external('react/lib/ExecutionEnvironment');
-        });
-      },
-    },
-    coverageReporter: {
-      type: 'lcov',
-      dir: 'coverage',
-    },
   });
 
   if (process.env.SAUCE_ACCESS_KEY && process.env.SAUCE_USERNAME) {
