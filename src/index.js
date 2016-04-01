@@ -41,6 +41,7 @@ export function StoryCollectionStory({
       flyTitle={source}
       title={title}
       link={{ href: webUrl }}
+      renderLink={renderLink}
       itemProp={itemProp}
       itemType={itemType}
     />
