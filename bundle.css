@@ -1,50 +1,73 @@
+/* stylelint-disable custom-property-pattern, number-max-precision */
+
 @font-face {
-  font-family: "EconSans";
+  font-family: EconSans;
   font-weight: 300;
-  src: url('/assets/ecosans-lig.woff2') format('woff2'), /* Super Modern Browsers */
-  url('/assets/ecosans-lig.woff') format('woff'); /* Pretty Modern Browsers */
+  src:
+    /* Super Modern Browsers */
+    url('/assets/ecosans-lig.woff2') format('woff2'),
+    /* Pretty Modern Browsers */
+    url('/assets/ecosans-lig.woff') format('woff');
 }
 
 @font-face {
-  font-family: "EconSans";
+  font-family: EconSans;
   font-style: normal;
-  src: url('/assets/ecosans-reg.woff2') format('woff2'), /* Super Modern Browsers */
-       url('/assets/ecosans-reg.woff') format('woff'); /* Pretty Modern Browsers */
+  src:
+    /* Super Modern Browsers */
+    url('/assets/ecosans-reg.woff2') format('woff2'),
+    /* Pretty Modern Browsers */
+    url('/assets/ecosans-reg.woff') format('woff');
 }
 
 @font-face {
-  font-family: "EconSans";
+  font-family: EconSans;
   font-weight: 700;
-  src: url('/assets/ecosans-bol.woff2') format('woff2'), /* Super Modern Browsers */
-       url('/assets/ecosans-bol.woff') format('woff'); /* Pretty Modern Browsers */
+  src:
+    /* Super Modern Browsers */
+    url('/assets/ecosans-bol.woff2') format('woff2'),
+    /* Pretty Modern Browsers */
+    url('/assets/ecosans-bol.woff') format('woff');
 }
 
 @font-face {
-  font-family: "EconSans";
+  font-family: EconSans;
   font-style: italic;
-  src: url('/assets/ecosans-ita.woff2') format('woff2'), /* Super Modern Browsers */
-  url('/assets/ecosans-ita.woff') format('woff'); /* Pretty Modern Browsers */
+  src:
+    /* Super Modern Browsers */
+    url('/assets/ecosans-ita.woff2') format('woff2'),
+    /* Pretty Modern Browsers */
+    url('/assets/ecosans-ita.woff') format('woff');
 }
 
 @font-face {
-  font-family: "MiloSerifPro";
+  font-family: MiloSerifPro;
   font-style: normal;
-  src: url('/assets/ecoserif-reg.woff2') format('woff2'), /* Super Modern Browsers */
-  url('/assets/ecoserif-reg.woff') format('woff'); /* Pretty Modern Browsers */
+  src:
+    /* Super Modern Browsers */
+    url('/assets/ecoserif-reg.woff2') format('woff2'),
+    /* Pretty Modern Browsers */
+    url('/assets/ecoserif-reg.woff') format('woff');
 }
 
 @font-face {
-  font-family: "MiloSerifPro";
+  font-family: MiloSerifPro;
   font-style: italic;
-  src: url('/assets/ecoserif-ita.woff2') format('woff2'), /* Super Modern Browsers */
-  url('/assets/ecoserif-ita.woff') format('woff'); /* Pretty Modern Browsers */
+  src:
+    /* Super Modern Browsers */
+    url('/assets/ecoserif-ita.woff2') format('woff2'),
+    /* Pretty Modern Browsers */
+    url('/assets/ecoserif-ita.woff') format('woff');
 }
 
 @font-face {
-  font-family: "MiloSerifPro";
+  font-family: MiloSerifPro;
   font-weight: 500;
-  src: url('/assets/ecoserif-med.woff2') format('woff2'), /* Super Modern Browsers */
-  url('/assets/ecoserif-med.woff') format('woff'); /* Pretty Modern Browsers */
+  src:
+    /* Super Modern Browsers */
+    url('/assets/ecoserif-med.woff2') format('woff2'),
+    /* Pretty Modern Browsers */
+    url('/assets/ecoserif-med.woff') format('woff');
 }
 
 /**
@@ -83,9 +106,11 @@
   /* Font: FF Milo Serif OT Medium */
 }
 
+/* stylelint-disable selector-no-type */
+
 html {
-  line-height: 1.35;
   font-size: 18px;
+  line-height: 1.35;
 }
 
 @media screen and (min-width: 500px) {
@@ -95,8 +120,8 @@ html {
 }
 
 body {
-  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 }
 
 /**
@@ -138,7 +163,7 @@ body {
   font-family: 'MiloSerifPro', Palatino, serif;
   font-size: 1.26563em;
   font-weight: normal;
-  letter-spacing: -0.020em;
+  letter-spacing: -0.02em;
   line-height: 1.26;
 }
 
@@ -149,7 +174,7 @@ body {
   -webkit-order: 1;
       -ms-flex-order: 1;
           order: 1;
-  color: #E3120b;
+  color: #e3120b;
   font-size: 0.79012em;
   font-weight: 300;
   line-height: 1.34;
@@ -163,7 +188,7 @@ body {
   -webkit-order: 2;
       -ms-flex-order: 2;
           order: 2;
-  color: #E3120b;
+  color: #e3120b;
   font-size: 0.88889em;
   font-weight: normal;
   line-height: 1.4;
@@ -186,7 +211,7 @@ body {
   -webkit-order: 5;
       -ms-flex-order: 5;
           order: 5;
-  color: #7A7A7A;
+  color: #7a7a7a;
   font-size: 0.62429em;
   font-weight: 300;
   letter-spacing: 0.015em;
@@ -201,7 +226,7 @@ body {
   height: 1.8px;
   height: 0.1rem;
   margin-bottom: 0.35em;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
 }
 
 .teaser__img {
@@ -246,14 +271,14 @@ body {
   font-family: 'EconSans', Tahoma, sans-serif;
   font-size: 18px;
   font-size: 1rem;
-  background: #FFFFFF;
+  background: #fff;
 }
 
 .story-collection__wrapper {
   overflow: hidden;
   padding: 13.5px;
   padding: 0.75rem;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
 }
 
 .story-collection .teaser__img {
@@ -288,7 +313,7 @@ body {
   width: 47px;
   height: 7px;
   margin-bottom: 0.35em;
-  background: #E3120b;
+  background: #e3120b;
 }
 
 .story-collection__date {
@@ -319,7 +344,7 @@ body {
 
 .story-collection__date,
 .story-collection__changed {
-  color: #B6B6B6;
+  color: #b6b6b6;
   font-style: italic;
 }
 
@@ -339,7 +364,7 @@ body {
   margin-bottom: 0.714em;
   margin-left: -13.5px;
   margin-left: -0.75rem;
-  background: #F2F2F2;
+  background: #f2f2f2;
 }
 
 .story-collection__rest .teaser__group-image {
@@ -352,11 +377,11 @@ body {
   overflow: hidden;
   margin-bottom: 1em;
   padding-bottom: 1em;
-  border-bottom: 1px solid #F2F2F2;
+  border-bottom: 1px solid #f2f2f2;
 }
 
 .story-collection__changed {
-  color: #B6B6B6;
+  color: #b6b6b6;
   font-size: 0.62em;
 }
 
@@ -382,13 +407,11 @@ body {
     bottom: 0;
     left: 0;
     max-width: 70%;
-    margin-bottom: calc(
-        -1 * 0.3em
-      );
+    margin-bottom: -0.3em;
     padding: 0.714em;
     padding-bottom: 0;
     padding-left: 0;
-    background: #FFFFFF;
+    background: #fff;
   }
   .story-collection__main-story .teaser__flytitle {
     margin-bottom: 0;
@@ -434,9 +457,7 @@ body {
     width: 33.33%;
   }
   .story-collection__main .teaser__group-text {
-    margin-bottom: calc(
-        -1 * 0.3em
-      );
+    margin-bottom: -0.3em;
     padding-top: 1.5rem;
     padding-right: 1.5rem;
   }
