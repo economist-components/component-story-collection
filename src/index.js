@@ -12,7 +12,7 @@ export function StoryCollectionStory({
   if (!story) {
     return (<div />);
   }
-  const { source, image, webUrl, itemProp, itemType, renderLink } = story;
+  const { source, image, webUrl, itemProp, itemType, renderLink, TeaserComponent = Teaser } = story;
   let title = story.title;
   if (isFirst) {
     if (title.length > titleLengthLimit) {
@@ -23,7 +23,7 @@ export function StoryCollectionStory({
       <div
         className="story-collection__main-story"
       >
-        <Teaser
+        <TeaserComponent
           image={{ src: image }}
           flyTitle={source}
           title={title}
