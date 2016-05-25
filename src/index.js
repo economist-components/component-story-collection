@@ -12,7 +12,7 @@ export function StoryCollectionStory({
   if (!story) {
     return (<div />);
   }
-  const { source, image, webUrl, itemProp, itemType, renderLink, TeaserComponent = Teaser } = story;
+  const { source, image, webUrl, itemProp, itemType, renderLink } = story;
   let title = story.title;
   if (isFirst) {
     if (title.length > titleLengthLimit) {
@@ -23,7 +23,7 @@ export function StoryCollectionStory({
       <div
         className="story-collection__main-story"
       >
-        <TeaserComponent
+        <Teaser
           image={{ src: image }}
           flyTitle={source}
           title={title}
@@ -53,7 +53,7 @@ export default function StoryCollection({
   stories,
   date,
   changed,
-  label = 'What matters today',
+  label = 'Our picks',
   itemType = 'https://bib.schema.org/Collection',
 }) {
   const firstStory = (
@@ -70,7 +70,7 @@ export default function StoryCollection({
   const changedText = changed ?
     (
       <div className="story-collection__changed">
-        {`Last updated: ${ changed }`}
+        {`Last updated: ${ date }, ${ changed }`}
       </div>
     ) : null;
   const dateText = date ?
@@ -87,7 +87,6 @@ export default function StoryCollection({
           <h1 className="story-collection__label">
             {label}
           </h1>
-          {dateText}
         </div>
         {firstStory}
         <div className="story-collection__rest">
@@ -123,4 +122,3 @@ if (process.env.NODE_ENV !== 'production') {
     titleLengthLimit: React.PropTypes.number,
   };
 }
-
