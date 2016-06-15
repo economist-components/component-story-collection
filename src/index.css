@@ -152,11 +152,6 @@
     position: relative;
   }
   .story-collection__main-story .teaser__group-text {
-    position: absolute;
-    right: auto;
-    bottom: 0;
-    left: 0;
-    max-width: 70%;
     margin-bottom:
       calc(
         -1 * var(--storycollection-main-story-text-nudge, var(--storycollection-default-main-story-text-nudge))
